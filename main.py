@@ -29,6 +29,7 @@ def importData():
                  row['Address'], row['City'], row['State'], row['ZipCode'], row['MobilePhoneNumber'], 0))
 
 
+
 def compareTo(input_val, colNum):
     located = False
     mycursor.execute("SELECT * FROM Student WHERE IsDeleted = 0")
@@ -39,10 +40,13 @@ def compareTo(input_val, colNum):
     return located
 
 
-exit = False
+
+
+exitProgram = False
 programLaunched = True
 
-while (exit != True):
+
+while (exitProgram != True):
 
     if (programLaunched == True):
         importData()
@@ -77,7 +81,7 @@ while (exit != True):
             if (round(float(gpa)) < 5.0):
                 break
             else:
-                gpa = input("GPA does not match requirements, enter a different value\n")
+                gpa = input("GPA does not meet requirements, enter another value\n")
 
         major = input("Enter the major of the student\n")
         while (major.isalpha() != True):
@@ -325,7 +329,7 @@ while (exit != True):
                     advisor = input("Advisor does not exist, enter an existing value\n")
 
     elif (userInput == 'Exit'):
-        exit = True
+        exitProgram = True
 
     else:
         print("Please enter a valid input from the following options:")

@@ -13,7 +13,7 @@
 * main.py
 
 ## Comments:
-* There are a few missed error handlings. Some of the inputs may accept periods or commas or any similar characters. A fix would be to use isAlpha() when applicable.
+* There are a few missed error handlings. Some of the inputs may accept periods or commas or any similar characters. A fix would be to use isAlpha()/isNumeric() when applicable.
 * Not enough comments were added due to time constraints.
 
 ## References
